@@ -1,0 +1,127 @@
+.container-fluid img{
+    width: 70px;
+    height: 70px;
+    margin: 0px;
+    padding: 0;
+    opacity: 1;
+}
+nav{
+    opacity: 0.8;
+}
+.nav-item{
+    border: solid green;
+    border-width: 1px;
+    border-radius: 10px; margin-left: 5px;  
+    height: 38px;
+    font-weight: 450;
+    color: green;
+    font-family: 'Hi Melody', cursive;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+
+
+  .nav-item:hover{
+background-color: rgb(178, 188, 178);
+transition-delay:  smooth 0.5s ease-in-out;
+
+
+  }
+  nav{
+      margin: 10px;
+      border-radius: 10px;
+      margin-top: 5px;
+  }
+  .col{
+      height: 250px;
+      background-color: aqua;
+      border-radius: 10PX;
+      margin: 10px;
+  }
+
+.c1:hover{
+margin-top: 20000px;
+transition: 0.5s smooth;
+
+}
+
+ .container{
+     margin: 1px;
+ }
+
+
+ #col1{
+     background-image: url(images/thiruvananthapuram.jpg);
+     background-size: cover;
+ }
+ #col2{
+     background-image: url(images/kollam.jpg);
+     background-size: cover;
+ }
+ #col3{
+    background-image: url(images/pathanamthitta.jpg);
+    background-size: cover;
+}
+#col4{
+    background-image: url(images/alappuzha.jpg);
+    background-size: cover;
+}
+#col5{
+    background-image: url(images/kottayam.jpg);
+    background-size: cover;
+}
+#col6{
+    background-image: url(images/idukki.jpg);
+    background-size: cover;
+}
+#col7{
+    background-image: url(images/kochi.jpg);
+    background-size: cover;
+}
+#col8{
+    background-image: url(images/thrissur.jpg);
+    background-size: cover;
+}
+#col9{
+    background-image: url(images/palakkad.jpg);
+    background-size: cover;
+}
+#col10{
+    background-image: url(images/malappuram.jpg);
+    background-size: cover;
+}
+#col11{
+    background-image: url(images/wayanad.jpg);
+    background-size: cover;
+}
+#col12{
+    background-image: url(images/kozhikkod.jpg);
+    background-size: cover;
+}
+#col13{
+    background-image: url(images/kannur.jpg);
+    background-size: cover;
+}
+#col14{
+    background-image: url(images/kasargod.jpg);
+    background-size: cover;
+}
+#col15{
+    background-color: transparent;
+}
+.c1 p{
+    background-color:rgba(216, 226, 208, 0.7);
+    border-radius: 10px;
+    color: green;
+    font-family: 'Hi Melody', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+.c1 h4{
+    color: aliceblue;
+    font-family: 'Hi Melody', cursive;
+    font-size: 22px;
+    font-weight: 600;
+}

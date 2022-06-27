@@ -1,0 +1,68 @@
+.container-fluid img{
+    width: 70px;
+    height: 70px;
+    margin: 0px;
+    padding: 0;
+    opacity: 1;
+}
+nav{
+    opacity: 0.8;
+}
+.nav-item{
+    border: solid green;
+    border-width: 1px;
+    border-radius: 10px; margin-left: 5px;  
+    height: 38px;
+    font-weight: 450;
+    color: green;
+    font-family: 'Hi Melody', cursive;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+
+
+  .nav-item:hover{
+background-color: rgb(178, 188, 178);
+transition-delay:  smooth 0.5s ease-in-out;
+
+
+  }
+  nav{
+      margin: 10px;
+      border-radius: 10px;
+      margin-top: 5px;
+  }
+  #row1{
+      height: 70px;
+      background-color: rgb(6, 35, 35);
+      border-radius: 5px;
+      text-align: center;
+      color: aliceblue;
+      font-family: 'Hi Melody', cursive;
+
+  }
+  #row1col1 h3{
+margin-top: 20px;
+  }
+ #row2{
+     height: 50px;
+     background-color: rgb(2, 27, 27);
+     border-radius: 5px;
+     text-align: center;
+     color: aliceblue;
+     font-family: 'Hi Melody', cursive;
+ } 
+ #row2col1 h4{
+     margin-top: 10px;
+ }
+ .container p{
+    font-family: 'Hi Melody', cursive;
+ }
+ .container h4{
+    font-family: 'Hi Melody', cursive;
+ }
+
+ .container a{
+    text-decoration: none;
+ }

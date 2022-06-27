@@ -1,0 +1,36 @@
+body{
+    background-image: url(images/kathakali.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:  'Hi Melody', cursive;
+}
+
+div{
+    background-color: transparent;
+    color: aliceblue;
+    font-family:  'Hi Melody', cursive;
+    font-size: 20px;
+}
+input{
+    z-index: 1;
+    font-family:  'Hi Melody', cursive;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    opacity: 0.6;
+    border: 0px;
+}
+button{
+    font-family:  'Hi Melody', cursive;
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+}
+.logbtn{
+    position: relative;
+    bottom: 50px;
+    border: 0px;
+}
+input{
+    width: 350px;
+}

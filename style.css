@@ -1,0 +1,53 @@
+
+.container-fluid img{
+    width: 70px;
+    height: 70px;
+    margin: 0px;
+    padding: 0;
+    opacity: 1;
+}
+#background-video {
+    width: 100vw;
+    height: 110vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  nav{
+    opacity: 0.55;
+}
+.nav-item{
+    border: solid green;
+    border-width: 1px;
+    border-radius: 10px; margin-left: 5px;  
+    height: 38px;
+    color: green;
+    font-family: 'Hi Melody', cursive;
+    font-size: 25px;
+    font-weight: 590;
+  }
+  .social li{
+    display: inline-block;
+    padding: 20px;
+    margin-top: 0;
+    padding-top: 0;
+}
+ h6{
+    font-family: 'Hi Melody', cursive;
+}
+
+  .nav-item:hover{
+background-color: rgb(178, 188, 178);
+transition-delay:  smooth 0.5s ease-in-out;
+
+
+  }
+  nav{
+      margin: 10px;
+      border-radius: 10px;
+      margin-top: 5px;
+  }
