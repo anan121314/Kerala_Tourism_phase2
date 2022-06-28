@@ -83,10 +83,12 @@
                     <p id="phn-text"></p>
                     </div>
                     <div>
-                    <!-- <label for="">password</label> -->
+                    <!-- <label for="" style="background-color: red;height: 20px;font-size: 15px;width:100px;text-align: center;padding-bottom: 5px;vertical-align: middle;border-radius: 4px;">weak</label> -->
                     <br>
-                    <input id="password" type="password" placeholder="password" style="margin-bottom: 12px;"required onkeyup="passval()">
+                    <label id="passind" for=""></label>
+                    <input id="password" type="password" placeholder="password" required onkeyup="passval()">
                     <br>
+                    
                     <div id="icons4" class="icons" style="float: right;position:relative;right:45px">
                         <i id="excla4" class="fa-solid fa-circle-exclamation" style="color:transparent"></i>
                         <!-- <i id="excla" class="fa-solid fa-circle-exclamation" style="color:red"></i> -->
@@ -146,10 +148,13 @@ var text5 = document.getElementById("pass-text");
 var x4=document.getElementById("excla4"); 
 var cpassword = document.getElementById("cpassword");
 var text6 = document.getElementById("cpass-text");
-var x5=document.getElementById("excla5");    
+var x5=document.getElementById("excla5");   
+var label1 = document.getElementById("passind");  
    
 
 function fnameval(){
+    label1.innerHTML='';
+
     text2.innerHTML="";
     text3.innerHTML="";
     text4.innerHTML="";
@@ -236,19 +241,31 @@ function passval(){
     text1.innerHTML="";
     text4.innerHTML="";
     text6.innerHTML="";
+   
     const pass_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+   
+      
+    
     if(pass_regex.test(password.value)){
         text5.innerText="";
-        x4.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;bottom:42px"></i>';
+        x4.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;bottom:31px"></i>';
+        if(password.value.length>7 && password.value.length<=11){
+            label1.innerHTML='<label for="" style="background-color: orange;height: 20px;font-size: 15px;width:220px;text-align: center;padding-bottom: 5px;vertical-align: middle;border-radius: 6px;margin-bottom:3px;">medium</label>';  
+        }
+        else if(password.value.length>11){
+            label1.innerHTML='<label for="" style="background-color: green;height: 20px;font-size: 15px;width:350px;text-align: center;padding-bottom: 5px;vertical-align: middle;border-radius: 6px;margin-bottom:3px;">strong</label>';  
+        }
         return true;
     }
     else{
         text5.innerHTML="<ul><li>must contain at least 1 lowercase alphabet</li><li>must contain at least 1 uppercase alphabet</li><li>must contain at least 1 number</li><li>must contain at least one special character</li><li>must be eight characters or longer</li></ul>";
         text5.style.color="red";
         text5.style.fontSize="15px";
-        x4.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;bottom:42px"></i>';
+        x4.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;bottom:31px"></i>';
+        label1.innerHTML='<label for="" style="background-color: red;height: 20px;font-size: 15px;width:100px;text-align: center;padding-bottom: 5px;vertical-align: middle;border-radius: 6px;margin-bottom:3px;">poor</label>';
         return false;
     }
+   
 }
 function cpassval(){
 
