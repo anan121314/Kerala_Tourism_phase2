@@ -2,11 +2,11 @@ body{
     background-image: url(images/hill.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family:  'Hi Melody', cursive;
 }
-#popup input{
+ input{
     width: 400px;
     border-radius: 10px;
-    position: relative;
-    bottom: 10px;
-
+    padding:0;
+    height: 35px;
 }

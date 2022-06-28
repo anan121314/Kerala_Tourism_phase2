@@ -28,39 +28,51 @@
   </div>
 
   <div class="container">
-    <div style="height: 430px;" class="row">
+    <div  class="row">
         <div class="col">
 
         </div>
         <div style="background-color: black;opacity:0.7;border-radius:10px" class="col">
+                 <a id="close-popup-btn" class="close-btn" href="index.html" style="color: green;text-decoration: none; font-size: 30px;float: right;" >&times;</a>
 
 
-            <div style="font-family: 'Hi Melody', cursive;font-size:25px" class="content">
-          
-                <div  id="popup" class="loginpage">
-                  <a id="close-popup-btn" class="close-btn" href="index.html" style="color: green;text-decoration: none; font-size: 30px;float: right;" >&times;</a>
-                  <div class="form">
-                    <h5 style="color: green;padding-top: 10px;font-family:  'Hi Melody', cursive;font-size: 28px;font-weight: 600;">login</h5>
-                    <div class="form-element">
+                  <form action="destinations.html" id="form" onsubmit="return formvalidate()">
+
+                      <h4 style="color: green;padding-top: 10px;font-size: 28px;font-weight: 600;text-align: center;">login</h4>
+
+
+                      <!-- email -->
+                      <div class="email" style="margin-bottom: 0px;padding-bottom:0px;">
                       <label for="email"style="color: green;padding-bottom:2px">email</label>
-                      <br>
-                      <input type="text" id="email" placeholder="email"  >
-                      <br>
-                      <label for="password" style="color: green;">password</label>
-                      <br>
-                      <input type="password" id="password" placeholder="password">
-                      <br>
-                      <button style="margin-top: 5px;border-radius: 10px;color: green;">sign in</button>
-                      <br>
-                      <a href="#" style="text-decoration: none;">forgot password</a>
-                      <h4 style="color:green;position: relative;top: 25px;font-weight: 600;">do not have an account?</h4>
-                      <a href="signup.html"><button style="position: relative;bottom:5px;top: 14px;border: solid black;border-width: 1px;border-radius: 10px;color: green;" >Signup</button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      <input id="email" type="email"  placeholder="email" required onkeyup="validate()">
+                      <div class="icons" style="float: right;position:relative;bottom:29px;">
+                      <i id="excla" class="fa-solid fa-circle-exclamation"></i>
+                      <i id="check" class="fa-regular fa-circle-check" style="position: relative;right:20px;" ></i>
+                      </div>
+                      <p id="error" style="background-color: red;color:aliceblue;width:400px;text-align:center;border-radius:5px;margin-top: 5px;"></p>
+                      </div>
+                      <!-- email end -->
 
-        </div>
+
+                      <!-- password -->
+                      <div class="password">
+                      <label for="password" style="color: green;padding-top: 0px;margin-top: 0px;">password</label>
+                      <input type="password" id="password" placeholder="password" required>
+                      </div>
+                      <!-- password end -->
+
+
+                      <!-- <button style="margin-top: 5px;border-radius: 10px;color: green;">sign in</button> -->
+                      <input type="submit" value="login" style="margin-top: 5px;border-radius: 10px;color: green;width:70px;">
+                     
+                  </form>
+                      <a href="#" style="text-decoration: none;">forgot password</a>
+                      <div class="signup" style="margin-top: 15px;margin-bottom: 5px;">
+                      <h5 style="color:green;font-weight: 400;">do not have an account?</h5>
+                      <a href="signup.html"><button style="border: solid black;border-width: 1px;border-radius: 10px;color: green;" >Signup</button></a>
+                      </div>
+                 
+                </div>
         <div  class="col">
 
         </div>
@@ -75,6 +87,50 @@
         </div>
     </div>
   </div>
+
+
+  <!-- script -->
+<script>
+let email = document.getElementById("email");
+let error = document.getElementById("error");
+let x = document.getElementById("excla");
+let y = document.getElementById("check");
+let password = document.getElementById("password")
+y.style.color="transparent";
+x.style.color="transparent";
+function validate(){
+  let regexp = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,8})((.[a-z]{2,8})?)$/;
+  if (regexp.test(email.value)){
+    error.innerText="valid";
+    error.style.backgroundColor="green";
+    x.style.visibility="hidden";
+    y.style.color="green";
+    return true;
+  }
+  else{
+    error.innerText="enter valid email";
+    error.style.backgroundColor="red";
+    y.style.visibility="hidden";
+    x.style.color="red";
+    return false;
+  }
+}
+
+function formvalidate(){
+  const pass_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+ if(email.value.trim()==""||password.value.trim()==""){
+  alert("fields cannot be empty");
+  return false;
+ }
+  else if(validate()==true && pass_regex.test(password.value)==false){
+  alert("password should be combination of uppercase,lowercase,number and special characters");
+  return false;
+ }
+}
+
+</script>
+
+
 
 
 </body>

@@ -21,7 +21,7 @@
 </div>
 
 <div class="container">
-    <div style="height: 650px;"  class="row">
+    <div   class="row">
         <div style="width: 100px;" class="col">
             <div style="margin-top: 20px;margin-left:-40px">
             <a href="index.html"><i class="fa-solid fa-house-chimney fa-2x" style="color: white;;"></i></a>
@@ -32,39 +32,90 @@
 
             <div >
                 <h4 style="margin-top: 30px;margin-bottom:20px">sign up</h4>
-                <form action="#">
-                    <label for="">first name</label>
+                <form action="login.html" onsubmit="return validate()">
+                    <div>
+                    <!-- <label for="">first name</label> -->
+                    <input id="fname" type="text" placeholder="first name" style="margin-bottom: 25px;" required onkeyup="fnameval()">
+                    <div id="icons" class="icons" style="float: right;position:relative;right:45px">
+                        <i id="excla" class="fa-solid fa-circle-exclamation" style="color:transparent"></i>
+                        <!-- <i id="excla" class="fa-solid fa-circle-exclamation" style="color:red"></i> -->
+                        <!-- <i id="check" class="fa-regular fa-circle-check" style="color:green"></i> -->
+                        </div>
+                    <p id="fname-text"></p>
+                    </div>
+
+                    <div>
+                    <!-- <label for="last name">last name</label> -->
+                    
+                    <input id="lname" type="text" placeholder="last name" style="margin-bottom: 5px;" required onkeyup="lnameval()">
+                   
+                    <div id="icons1" class="icons" style="float: right;position:relative;right:45px">
+                        <i id="excla1" class="fa-solid fa-circle-exclamation" style="color:transparent"></i>
+                        <!-- <i id="excla" class="fa-solid fa-circle-exclamation" style="color:red"></i> -->
+                        <!-- <i id="check" class="fa-regular fa-circle-check" style="color:green"></i> -->
+                        </div>
+                    <p id="lname-text"></p>
+                    </div>
+
+                    <div>
+                    <!-- <label for="email">email</label> -->
                     <br>
-                    <input type="text" placeholder="first name" style="margin-bottom: 12px;">
+                    <input id="email" type="email" placeholder="email" style="margin-bottom: 5px;"required onkeyup="emailval()">
                     <br>
-                    <label for="last name">last name</label>
+                    <div id="icons2" class="icons" style="float: right;position:relative;right:45px">
+                        <i id="excla2" class="fa-solid fa-circle-exclamation" style="color:transparent"></i>
+                        <!-- <i id="excla" class="fa-solid fa-circle-exclamation" style="color:red"></i> -->
+                        <!-- <i id="check" class="fa-regular fa-circle-check" style="color:green"></i> -->
+                        </div>
+                    <p id="email-text"></p>
+
+                    </div>
+                    <div>
+                    <!-- <label for="">phone number</label> -->
                     <br>
-                    <input type="text" placeholder="last name" style="margin-bottom: 12px;">
+                    <input type="text" placeholder="phone number" style="margin-bottom: 0px;" id="phn_no" required onkeyup="phnval()">
                     <br>
-                    <label for="">email</label>
+                    <div id="icons3" class="icons" style="float: right;position:relative;right:45px">
+                        <i id="excla3" class="fa-solid fa-circle-exclamation" style="color:transparent"></i>
+                        <!-- <i id="excla" class="fa-solid fa-circle-exclamation" style="color:red"></i> -->
+                        <!-- <i id="check" class="fa-regular fa-circle-check" style="color:green"></i> -->
+                        </div>
+                    <p id="phn-text"></p>
+                    </div>
+                    <div>
+                    <!-- <label for="">password</label> -->
                     <br>
-                    <input type="text" placeholder="email" style="margin-bottom: 12px;">
+                    <input id="password" type="password" placeholder="password" style="margin-bottom: 12px;"required onkeyup="passval()">
                     <br>
-                    <label for="">phone number</label>
+                    <div id="icons4" class="icons" style="float: right;position:relative;right:45px">
+                        <i id="excla4" class="fa-solid fa-circle-exclamation" style="color:transparent"></i>
+                        <!-- <i id="excla" class="fa-solid fa-circle-exclamation" style="color:red"></i> -->
+                        <!-- <i id="check" class="fa-regular fa-circle-check" style="color:green"></i> -->
+                    </div>
+                    <p id="pass-text"></p>
+                    
+                    </div>
+                    <!-- <label for="">confirm password</label> -->
                     <br>
-                    <input type="text" placeholder="phone number" style="margin-bottom: 12px;">
+                    <div>
+                    <input id="cpassword" type="password" placeholder="confirm password" style="margin-bottom: 12px;"required onkeyup="cpassval()">
                     <br>
-                    <label for="">password</label>
+                    <div id="icons5" class="icons" style="float: right;position:relative;right:45px">
+                        <i id="excla5" class="fa-solid fa-circle-exclamation" style="color:transparent"></i>
+                        <!-- <i id="excla" class="fa-solid fa-circle-exclamation" style="color:red"></i> -->
+                        <!-- <i id="check" class="fa-regular fa-circle-check" style="color:green"></i> -->
+                    </div>
+                    <p id="cpass-text"></p>
+                        </div>
+                    <button style="margin-top: 5px;border-radius: 10px;width: 80px;">submit</button>
                     <br>
-                    <input type="text" placeholder="password" style="margin-bottom: 12px;">
-                    <br>
-                    <label for="">confirm password</label>
-                    <br>
-                    <input type="text" placeholder="confirm password" style="margin-bottom: 12px;">
-                    <br>
-                    <button style="margin-top: 5px;border-radius: 10px;width: 80px;"><a href="#" style="text-decoration: none;">submit</a></button>
-                    <br>
+                </form>
                     <h5
                     style="margin-top: 20px;">already have an account?</h5>
                     <br>
                     <button class="logbtn" style="margin-top: 20px;border-radius:10px"><a href="login.html" style="text-decoration: none;">login</a></button>
         
-                </form>
+                
             </div>
 
 
@@ -75,6 +126,159 @@
     </div>
 </div>
    
+
+
+<script>
+var fname = document.getElementById("fname");
+var text1 = document.getElementById("fname-text");
+var x=document.getElementById("excla");  
+var lname = document.getElementById("lname");
+var text2 = document.getElementById("lname-text");
+var x1=document.getElementById("excla1");    
+var email = document.getElementById("email");
+var text3 = document.getElementById("email-text");
+var x2=document.getElementById("excla2"); 
+var phn_no = document.getElementById("phn_no");
+var text4 = document.getElementById("phn-text");
+var x3=document.getElementById("excla3");    
+var password = document.getElementById("password");
+var text5 = document.getElementById("pass-text");
+var x4=document.getElementById("excla4"); 
+var cpassword = document.getElementById("cpassword");
+var text6 = document.getElementById("cpass-text");
+var x5=document.getElementById("excla5");    
+   
+
+function fnameval(){
+    text2.innerHTML="";
+    text3.innerHTML="";
+    text4.innerHTML="";
+    text5.innerHTML="";
+    text6.innerHTML="";
+    const fname_regex = /^[a-zA-Z]+$/;
+    if(fname_regex.test(fname.value)){
+        text1.innerText="";
+        x.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;"></i>';
+        return true;
+    }
+    else{
+        text1.innerText="invalid name format";
+        text1.style.color="red";
+        text1.style.fontSize="15px";
+        x.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;"></i>';
+        return false;
+    }
+}
+function lnameval(){
+    text1.innerHTML="";
+    text3.innerHTML="";
+    text4.innerHTML="";
+    text5.innerHTML="";
+    text6.innerHTML="";
+    const lname_regex=/^[a-zA-Z]+(\s[a-zA-Z]+)?$/;
+    if(lname_regex.test(lname.value)){
+        text2.innerText="";
+        x1.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;"></i>';
+        return true;
+    }
+    else{
+        text2.innerText="invalid name format";
+        text2.style.color="red";
+        text2.style.fontSize="15px";
+        x1.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;"></i>';
+        return false;
+    }
+}
+    function emailval(){
+    text1.innerHTML="";
+    text2.innerHTML="";
+    text4.innerHTML="";
+    text5.innerHTML="";
+    text6.innerHTML="";
+    const email_regex=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,8})((.[a-z]{2,8})?)$/;
+    if(email_regex.test(email.value)){
+        text3.innerText="";
+        x2.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;bottom:35px;"></i>';
+        return true;
+    }
+    else{
+        text3.innerText="invalid email format";
+        text3.style.color="red";
+        text3.style.fontSize="15px";
+        x2.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;bottom:35px;"></i>';
+        return false;
+    }
+}
+
+function phnval(){
+    text2.innerHTML="";
+    text3.innerHTML="";
+    text1.innerHTML="";
+    text5.innerHTML="";
+    text6.innerHTML="";
+    const phn_regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g;
+    if(phn_regex.test(phn_no.value)){
+        text4.innerText="";
+        x3.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;bottom:31px"></i>';
+        return true;
+    }
+    else{
+        text4.innerText="invalid name format";
+        text4.style.color="red";
+        text4.style.fontSize="15px";
+        x3.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;bottom:31px"></i>';
+        return false;
+    }
+}
+function passval(){
+    text2.innerHTML="";
+    text3.innerHTML="";
+    text1.innerHTML="";
+    text4.innerHTML="";
+    text6.innerHTML="";
+    const pass_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+    if(pass_regex.test(password.value)){
+        text5.innerText="";
+        x4.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;bottom:42px"></i>';
+        return true;
+    }
+    else{
+        text5.innerHTML="<ul><li>must contain at least 1 lowercase alphabet</li><li>must contain at least 1 uppercase alphabet</li><li>must contain at least 1 number</li><li>must contain at least one special character</li><li>must be eight characters or longer</li></ul>";
+        text5.style.color="red";
+        text5.style.fontSize="15px";
+        x4.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;bottom:42px"></i>';
+        return false;
+    }
+}
+function cpassval(){
+
+    text2.innerHTML="";
+    text3.innerHTML="";
+    text1.innerHTML="";
+    text4.innerHTML="";
+    text5.innerHTML="";
+   
+    if(cpassword.value==password.value){
+        text6.innerText="";
+        x5.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;bottom:42px"></i>';
+        return true;
+    }
+    else{
+        text6.innerText="password did not match";
+        text6.style.color="red";
+        text6.style.fontSize="15px";
+        x5.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;bottom:42px"></i>';
+        return false;
+    }
+
+}
+function validate(){
+    if((cpassval() && passval() && phnval() && emailval() && lnameval() && fnameval())==false){
+        alert("Satisfy all input criterias");
+        return false;
+    }
+}
+</script>
 
 </body>
 </html>
