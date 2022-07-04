@@ -247,7 +247,10 @@ function passval(){
       
     
     if(pass_regex.test(password.value)){
-        text5.innerText="";
+        //text5.innerText="";
+        text5.innerHTML="<ul id='all'><li id='one'>must contain at least 1 lowercase alphabet</li><li id='two'>must contain at least 1 uppercase alphabet</li><li id='three'>must contain at least 1 number</li><li id='four'>must contain at least one special character</li><li id='five'>must be eight characters or longer</li></ul>";
+        let all=document.getElementById("all");
+        all.style.color="green";
         x4.innerHTML='<i id="check" class="fa-regular fa-circle-check" style="color:green;position:relative;right:25px;bottom:31px"></i>';
         if(password.value.length>7 && password.value.length<=11){
             label1.innerHTML='<label for="" style="background-color: orange;height: 20px;font-size: 15px;width:220px;text-align: center;padding-bottom: 5px;vertical-align: middle;border-radius: 6px;margin-bottom:3px;">medium</label>';  
@@ -258,8 +261,34 @@ function passval(){
         return true;
     }
     else{
-        text5.innerHTML="<ul><li>must contain at least 1 lowercase alphabet</li><li>must contain at least 1 uppercase alphabet</li><li>must contain at least 1 number</li><li>must contain at least one special character</li><li>must be eight characters or longer</li></ul>";
+        
+        text5.innerHTML="<ul><li id='one'>must contain at least 1 lowercase alphabet</li><li id='two'>must contain at least 1 uppercase alphabet</li><li id='three'>must contain at least 1 number</li><li id='four'>must contain at least one special character</li><li id='five'>must be eight characters or longer</li></ul>";
         text5.style.color="red";
+        let five=document.getElementById("five");
+        let two=document.getElementById("two");
+        let one=document.getElementById("one");
+        let three=document.getElementById("three");
+        let four=document.getElementById("four");
+        if(password.value.length>8){
+           // text5.innerHTML='<ul><li>must contain at least 1 lowercase alphabet</li><li>must contain at least 1 uppercase alphabet</li><li>must contain at least 1 number</li><li>must contain at least one special character</li><li style="color:green">must be eight characters or longer</li></ul>';
+           five.style.color="green";
+        }
+        const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        if(specialChars.test(password.value)){
+           four.style.color="green";
+        }
+        const numreg = /[0-9]/;
+        if(numreg.test(password.value)){
+           three.style.color="green";
+        }
+        const capsreg = /[A-Z]/;
+        if(capsreg.test(password.value)){
+           two.style.color="green";
+        }
+        const smallreg = /[a-z]/;
+        if(smallreg.test(password.value)){
+           one.style.color="green";
+        }
         text5.style.fontSize="15px";
         x4.innerHTML='<i id="excla" class="fa-solid fa-circle-exclamation" style="color:red;position:relative;right:25px;bottom:31px"></i>';
         label1.innerHTML='<label for="" style="background-color: red;height: 20px;font-size: 15px;width:100px;text-align: center;padding-bottom: 5px;vertical-align: middle;border-radius: 6px;margin-bottom:3px;">poor</label>';
